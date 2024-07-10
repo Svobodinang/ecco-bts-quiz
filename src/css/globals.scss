@@ -26,38 +26,4 @@ body {
     @include font-size;
     @include reduced-motion;
     @include reset;
-
-    img {
-        max-width: unset;
-    }
-
-    p {
-        font-size: 1em;
-    }
-
-    a,
-    button {
-        @include reset-btn;
-    }
-
-    h1,
-    p,
-    h2 {
-        font-family: $font-main;
-        line-height: 1.05;
-        margin-bottom: 0;
-    }
-}
-
-section {
-    font-size: vw($basePxDp);
-    width: 100vw;
-
-    @media (--viewport-portrait-layout) {
-        font-size: min(rem($basePxMb, true), vw($basePxMb, true));
-    }
-
-    @media (--viewport-mobile-lp) {
-        font-size: rem($basePxMb * 1.1, true);
-    }
 }

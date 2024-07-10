@@ -4,15 +4,15 @@
 @import "~poly-fluid-sizing";
 @import "./mixins/animationMixins.scss";
 
-$basePxDp: 18;
-$baseWidthDp: 1440;
-$baseHeightDp: 1024;
+$basePxDp: 20;
+$baseWidthDp: 1920;
+$baseHeightDp: 850;
 $maxWidthDp: 1920;
 
 // add
-$basePxMb: 12;
-$baseWidthMb: 360;
-$baseHeightMb: 667;
+$basePxMb: 14;
+$baseWidthMb: 375;
+$baseHeightMb: 677;
 
 @function rem($px, $mobile: false, $clicker: false) {
     $base: if($mobile == true, $basePxMb, $basePxDp);
@@ -69,12 +69,12 @@ $baseHeightMb: 667;
     font-weight: $font-weight-main;
 
     $mapFontSize: (
-        560px: 12px,
-        850px: 12px,
+        560px: 15px,
+        850px: 15px,
         852px: 12px,
-        960px: 14px,
-        1440px: 18px,
-        1920px: 24px
+        960px: 12px,
+        1440px: 15px,
+        1920px: 20px
     );
     $mapFontSizePt: (
         360px: 12px,
