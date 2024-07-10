@@ -1,0 +1,83 @@
+@use "sass:list";
+@use "sass:map";
+
+// Derived from poly-fluid-sizing v1.2.1
+// https://github.com/Jakobud/poly-fluid-sizing
+
+// Dependency functions
+@import "node_modules/poly-fluid-sizing/list-remove.scss";
+@import "node_modules/poly-fluid-sizing/list-sort.scss";
+@import "node_modules/poly-fluid-sizing/map-sort.scss";
+@import "./poly-fluid-with-extrapolation/pfs-start.scss";
+@import "./poly-fluid-with-extrapolation/pfs-iteration.scss";
+
+/// poly-fluid-sizing
+/// Generate linear interpolated size values through multiple break points
+/// @param $property - A string CSS property name
+/// @param $map - A SASS map of viewport unit and size value pairsd
+/// @param $fixFirst - A Boolean flag if you need to fix a value of the first breakpoint
+/// @param $fixLast - A Boolean flag if you need to fix a value of the last breakpoint
+/// @requires.md function linear-interpolation
+/// @requires.md function map-sort
+/// @example
+///   @include poly-fluid-sizing('font-size', (576px: 22px, 768px: 24px, 992px: 34px));
+/// @author Jake Wilson <jake.e.wilson@gmail.com>
+@mixin poly-fluid-sizing-with-extrapolation($property, $map, $fixFirst: true, $fixLast: true, $orientation: false) {
+    // Get the number of provided breakpoints
+    $length: list.length(map.keys($map));
+
+    // Error if the number of breakpoints is < 2
+    @if $length < 2 {
+        @error "poly-fluid-sizing() $map requires at least values";
+    }
+
+    // Sort the map by viewport width (key)
+    $map: map-sort($map);
+    $keys: map.keys($map);
+
+    // Counter start
+    $start: 1;
+
+    @if $orientation != false {
+        @media (orientation: $orientation) {
+            @include pfs-start($property, $map, $keys, $fixFirst, $fixLast);
+        }
+    } @else {
+        @include pfs-start($property, $map, $keys, $fixFirst, $fixLast);
+    }
+
+    @if $fixFirst != true {
+        // Shift counter to the 2nd breakpoint
+        $start: 2;
+    }
+
+    // Interpolated size through breakpoints
+    @if $length - $start > 0 {
+        @for $i from 1 through ($length - $start) {
+            $j: $i + $start - 1;
+
+            @if $orientation != false {
+                @media (min-width: nth($keys, $j)) and (orientation: $orientation) {
+                    @include pfs-iteration($property, $map, $keys, $j);
+                }
+            } @else {
+                @media (min-width: nth($keys, $j)) {
+                    @include pfs-iteration($property, $map, $keys, $j);
+                }
+            }
+        }
+    }
+
+    // Maxmimum size
+    @if $fixLast {
+        @if $orientation != false {
+            @media (min-width: nth($keys, $length)) and (orientation: $orientation) {
+                #{$property}: map.get($map, list.nth($keys, $length));
+            }
+        } @else {
+            @media (min-width: nth($keys, $length)) {
+                #{$property}: map.get($map, list.nth($keys, $length));
+            }
+        }
+    }
+}

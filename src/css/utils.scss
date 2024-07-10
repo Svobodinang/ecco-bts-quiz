@@ -1,0 +1,93 @@
+@use "sass:math";
+@import "./mixins/core.scss";
+@import "./mixins/reset.scss";
+@import "~poly-fluid-sizing";
+@import "./mixins/animationMixins.scss";
+
+$basePxDp: 18;
+$baseWidthDp: 1440;
+$baseHeightDp: 1024;
+$maxWidthDp: 1920;
+
+// add
+$basePxMb: 12;
+$baseWidthMb: 360;
+$baseHeightMb: 667;
+
+@function rem($px, $mobile: false, $clicker: false) {
+    $base: if($mobile == true, $basePxMb, $basePxDp);
+
+    @if $clicker == true {
+        $base: if($mobile == true, $basePxMb, $basePxClickerDp);
+    }
+
+    // @return #{math.div($px, $base)}rem;
+    @return calc((#{$px} * var(--font-size)) / #{$base});
+}
+
+@function em($px, $ref) {
+    @return #{math.div($px, $ref)}em;
+}
+
+@function vw($px, $mobile: false, $clicker: false) {
+    $base: if($mobile == true, $baseWidthMb, $baseWidthDp);
+
+    @if $clicker == true {
+        $base: if($mobile == true, $baseWidthMb, $baseWidthClickerDp);
+    }
+
+    @return #{math.div(100 * $px, $base)}vw;
+}
+
+@function vh($px, $mobile: false, $clicker: false) {
+    $base: if($mobile == true, $baseHeightMb, $baseHeightDp);
+
+    @if $clicker == true {
+        $base: if($mobile == true, $baseWidthMb, $baseHeightClickerDp);
+    }
+
+    @return #{math.div($px * 100, $base)}vh;
+}
+
+@function vw-vh-contain($px, $mobile: false, $clicker: false) {
+    $vw: vw($px, $mobile, $clicker);
+    $vh: vh($px, $mobile, $clicker);
+
+    // very cool kostyl coz sass is case-sensitive, but css isn't
+    @return Min(#{$vw}, #{$vh});
+}
+
+@function percent($px, $base: 1) {
+    @return #{math.div(100% * $px, $base)};
+}
+
+@mixin font-size {
+    // *
+    // * The basic font size for articles content and basic ui-elements
+    // *
+    line-height: 1.05;
+    font-weight: $font-weight-main;
+
+    $mapFontSize: (
+        560px: 12px,
+        850px: 12px,
+        852px: 12px,
+        960px: 14px,
+        1440px: 18px,
+        1920px: 24px
+    );
+    $mapFontSizePt: (
+        360px: 12px,
+        375px: 14px,
+        425px: 14px,
+        1024px: 24px
+    );
+
+    @include poly-fluid-sizing("--font-size", $mapFontSize);
+
+    @media (max-width: 1024px) and (orientation: portrait) {
+        @include poly-fluid-sizing("--font-size", $mapFontSizePt);
+    }
+
+    font-size: var(--font-size);
+}

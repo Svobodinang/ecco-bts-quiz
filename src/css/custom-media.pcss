@@ -1,0 +1,23 @@
+/* LAYOUT GROUPS */
+@custom-media --viewport-landscape-layout (width > 1024px), (width > 425px) and (height > 425px) and (width <= 1024px) and (orientation: landscape);
+@custom-media --viewport-portrait-layout (width <= 425px), (height <= 425px), (width <= 1024px) and (orientation: portrait);
+
+/* DESKTOP SIZE STEPS */
+@custom-media --viewport-desktop (width > 1024px);
+@custom-media --viewport-desktop-l (width > 1920px);
+@custom-media --viewport-desktop-m (width > 1024px) and (width <= 1920px);
+@custom-media --viewport-desktop-s (width > 825px) and (width <= 1024px) and (orientation: landscape);
+
+/* TABLET PRECISE ORIENTATIONS */
+@custom-media --viewport-tablet-pt (width > 425px) and (width <= 1024px) and (orientation: portrait);
+@custom-media --viewport-tablet-lp (width > 425px) and (width <= 825px) and (height > 425px) and (orientation: landscape);
+
+/* MOBILE COMMON */
+@custom-media --viewport-mobile (width <= 425px), (height <= 425px);
+
+/* MOBILE SMALL SIZE */
+@custom-media --viewport-mobile-s (width <= 375px), (height <= 375px);
+
+/* MOBILE PRECISE ORIENTATIONS */
+@custom-media --viewport-mobile-lp (height <= 425px) and (orientation: landscape);
+@custom-media --viewport-mobile-pt (width <= 425px) and (orientation: portrait);

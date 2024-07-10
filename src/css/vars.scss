@@ -1,0 +1,14 @@
+@import "./vars-scss.scss";
+
+#tpl {
+    --color-accent: #{$color-red};
+    --k-progress-x: 0;
+    --k-progress-y: 0;
+    --k-progress-rotate: 0;
+    --from-x: 0%;
+    --from-scale: 1;
+    --delay: 0s;
+    --parallax-progress: 0;
+    --k-progress-scale: 0;
+    --out-delay: 0s;
+}

@@ -1,0 +1,53 @@
+@use "sass:math";
+
+// $unitPart - длительность одного покачивания
+// $num - количество повторений
+// $factor - амплитуда движения
+// $type - размерность, по умолчанию - %
+// eslint-disable-next-line
+@mixin pointright($unitPart: 1, $num: 1, $factor: 0.25) {
+    0% {
+        transform-origin: 50% 100%;
+        transform: translate(0, 0);
+    }
+
+    $unitDur: $unitPart * 100%;
+
+    @for $i from 0 to $num {
+        #{($i + 0.05) * $unitDur} {
+            transform-origin: 50% 100%;
+            transform: translate(-0.5%, 0);
+        }
+
+        #{($i + 0.35) * $unitDur} {
+            transform-origin: 50% 0;
+            transform: translate(64% * $factor, 0);
+            animation-timing-function: cubic-bezier(0.27, 0, 0.65, 1);
+        }
+
+        #{($i + 0.5) * $unitDur} {
+            transform-origin: 50% 0%;
+            transform: translate(68% * $factor, 0);
+            animation-timing-function: ease-in-out;
+        }
+
+        #{($i + 1) * $unitDur} {
+            transform-origin: 50% 100%;
+            transform: translate(0, 0);
+        }
+    }
+
+    100% {
+        transform-origin: 50% 100%;
+        transform: translate(0, 0);
+    }
+}
+
+@mixin text-clip-transition($color, $color-hover, $dur: 0.5s) {
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, $color 50%, $color-hover 50%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position $dur ease-in-out;
+}
