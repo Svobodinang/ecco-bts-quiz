@@ -1,0 +1,54 @@
+#tpl {
+    .quiz-input {
+        &--checkbox {
+            font-size: 1rem;
+
+            .quiz-input__input[type="checkbox"] {
+                display: none;
+            }
+
+            .quiz-input__label {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                width: rem(104);
+                height: rem(114);
+
+                @media (--viewport-portrait-layout) {
+                    width: rem(110, true);
+                    height: rem(119, true);
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: rem(-12);
+                    left: rem(7);
+                    width: rem(24);
+                    height: rem(28);
+                    background-image: url("~assets/images/tape.png");
+                    background-size: cover;
+                    z-index: 99;
+
+                    @media (--viewport-portrait-layout) {
+                        width: rem(25, true);
+                        height: rem(30, true);
+                        top: rem(-12, true);
+                        left: rem(7, true);
+                    }
+                }
+            }
+
+            .quiz-input__input.hide[type="checkbox"] + .quiz-input__label {
+                opacity: 0;
+            }
+
+            .quiz-input__input[disabled="true"] + .quiz-input__label {
+                &,
+                .quiz-input__label {
+                    cursor: default;
+                }
+            }
+        }
+    }
+}

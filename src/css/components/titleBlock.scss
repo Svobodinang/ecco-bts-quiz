@@ -1,0 +1,22 @@
+#tpl {
+    .title-block {
+        position: relative;
+        display: flex;
+        color: $color-light;
+        align-items: flex-start;
+
+        &__title {
+            font-weight: $font-weight-title;
+            font-size: rem(22);
+
+            @media (--viewport-portrait-layout) {
+                text-align: center;
+                font-size: rem(14, true);
+            }
+        }
+
+        &__ellipse {
+            position: absolute;
+        }
+    }
+}

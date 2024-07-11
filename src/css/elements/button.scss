@@ -1,0 +1,18 @@
+#tpl {
+    .quiz-button {
+        @include reset-btn;
+
+        font-size: 1rem;
+        text-transform: uppercase;
+        display: block;
+        font-family: $font-accent;
+        font-weight: $font-weight-accent;
+        background-color: $color-light;
+        padding: rem(13) rem(33);
+        cursor: pointer;
+
+        @media (--viewport-portrait-layout) {
+            padding: rem(9, true) rem(14, true);
+        }
+    }
+}

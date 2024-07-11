@@ -1,0 +1,38 @@
+#tpl {
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: rem(41);
+        align-items: flex-start;
+        width: 100%;
+
+        @media (--viewport-portrait-layout) {
+            align-items: center;
+            gap: rem(34, true);
+        }
+    }
+
+    .form-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: rem(21);
+        width: 100%;
+
+        @media (--viewport-portrait-layout) {
+            gap: rem(27, true);
+        }
+    }
+
+    .form-images-wrapper {
+        width: 100%;
+        flex-flow: row wrap;
+        gap: rem(23) rem(38);
+        max-width: rem(530);
+
+        @media (--viewport-portrait-layout) {
+            max-width: rem(260, true);
+            justify-content: space-between;
+            gap: rem(26) rem(40);
+        }
+    }
+}

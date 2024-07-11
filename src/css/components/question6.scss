@@ -1,0 +1,49 @@
+#tpl {
+    .question-6 {
+        @media (--viewport-portrait-layout) {
+            padding-top: rem(100, true);
+        }
+
+        .title-block {
+            margin-bottom: rem(88);
+            gap: rem(37);
+
+            @media (--viewport-portrait-layout) {
+                margin-bottom: rem(38 + 13, true);
+                gap: rem(44, true);
+            }
+
+            &__num {
+                width: rem(69);
+
+                @media (--viewport-portrait-layout) {
+                    width: rem(41, true);
+                }
+            }
+
+            &__title {
+                max-width: rem(420);
+                margin-top: rem(69);
+
+                @media (--viewport-portrait-layout) {
+                    max-width: rem(176, true);
+                    margin-top: rem(13, true);
+                }
+            }
+
+            &__ellipse {
+                width: rem(602);
+                height: rem(171);
+                top: rem(0);
+                left: rem(20);
+
+                @media (--viewport-portrait-layout) {
+                    width: rem(263, true);
+                    height: rem(98, true);
+                    top: rem(-20, true);
+                    left: rem(50, true);
+                }
+            }
+        }
+    }
+}

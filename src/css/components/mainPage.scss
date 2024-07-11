@@ -1,0 +1,21 @@
+#tpl {
+    .main-page {
+        display: flex;
+        flex-direction: column;
+        gap: rem(47);
+        align-items: flex-start;
+
+        img {
+            width: rem(495);
+
+            @media (--viewport-portrait-layout) {
+                width: rem(282, true);
+            }
+        }
+
+        @media (--viewport-portrait-layout) {
+            align-items: center;
+            gap: rem(21, true);
+        }
+    }
+}

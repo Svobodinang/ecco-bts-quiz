@@ -1,0 +1,64 @@
+#tpl {
+    .question-1 {
+        @media (--viewport-portrait-layout) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .title-block {
+            margin-bottom: rem(87);
+            gap: rem(50);
+            padding-left: rem(17);
+
+            @media (--viewport-portrait-layout) {
+                margin-bottom: rem(47, true);
+                padding-left: 0;
+                gap: 0;
+            }
+
+            &__title {
+                max-width: rem(392);
+                margin-top: rem(56);
+
+                @media (--viewport-portrait-layout) {
+                    font-size: rem(14, true);
+                    text-align: center;
+                    max-width: rem(285, true);
+                    margin-top: rem(12, true);
+                }
+            }
+
+            &__ellipse {
+                width: rem(581);
+                top: rem(-8);
+                left: rem(17 - 14);
+
+                @media (--viewport-portrait-layout) {
+                    width: rem(310, true);
+                    top: rem(-22, true);
+                    left: rem(8, true);
+                    transform: rotate(7deg);
+                }
+            }
+
+            &__num {
+                width: rem(46);
+
+                @media (--viewport-portrait-layout) {
+                    width: rem(28, true);
+                }
+            }
+        }
+
+        .quiz-input {
+            &--text-area {
+                margin-bottom: rem(35);
+
+                @media (--viewport-portrait-layout) {
+                    margin-bottom: rem(17, true);
+                }
+            }
+        }
+    }
+}
