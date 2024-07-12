@@ -18,28 +18,29 @@ body {
     font-family: $font-main;
     color: $color-text;
     width: 100%;
-    overflow-x: hidden;
     position: relative;
     height: auto;
+    min-height: 100vh;
+    max-width: 100vw;
     overflow: hidden;
 
     @include font-size;
     @include reduced-motion;
     @include reset;
 
-    @media (--viewport-portrait-layout) {
-        overflow: auto;
-    }
+    // @media (--viewport-portrait-layout) {
+    //     overflow: auto;
+    // }
 
     .quiz-wrapper {
         width: 100vw;
-        height: 100vh;
-        overflow: hidden;
+        height: auto;
+        min-height: 100vh;
         background-image: url("~assets/images/back.jpg");
         background-position: 30% 20%;
         background-repeat: no-repeat;
         background-size: cover;
-        padding: calc(70px + #{vh(112)}) rem(20) rem(20) max(#{vw(200)}, #{rem(200)});
+        padding: vh(112 + 70) rem(20) rem(50) max(#{vw(200)}, #{rem(200)});
 
         @media (--viewport-portrait-layout) {
             background-image: url("~assets/images/back-pt.jpg");
@@ -52,18 +53,18 @@ body {
 
     .quiz-content {
         max-width: rem(701);
-        max-height: 100%;
+        height: auto;
         position: relative;
 
         @media (--viewport-portrait-layout) {
             padding: 0 rem(22, true) rem(50, true);
             max-width: 100%;
-            margin-top: max(rem(361 * 1.2, true), vh(361 * 1.2, true));
+            padding-top: max(rem(361 * 1.2, true), vh(361 * 1.2, true));
             max-height: unset;
         }
 
         @media (--viewport-mobile-pt) {
-            margin-top: max(vh(361, true), rem(361, true));
+            padding-top: max(vh(361, true), rem(361, true));
         }
     }
 
@@ -75,11 +76,11 @@ body {
 
         .quiz-content {
             @media (--viewport-portrait-layout) {
-                margin-top: max(rem(307 * 1.3, true), vh(307 * 1.3, true));
+                padding-top: max(rem(307 * 1.3, true), vh(307 * 1.3, true));
             }
 
             @media (--viewport-mobile-pt) {
-                margin-top: max(vh(307, true), rem(307, true));
+                padding-top: max(vh(307, true), rem(307, true));
             }
         }
     }
@@ -88,15 +89,17 @@ body {
         width: 100%;
         height: 100%;
         background-image: url("~assets/images/back-blue.jpg");
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         background-size: cover;
         background-repeat: no-repeat;
         opacity: 0;
         pointer-events: none;
+        display: none;
 
         @media (--viewport-portrait-layout) {
+            position: absolute;
             background-image: url("~assets/images/back-blue-pt.jpg");
         }
 
@@ -123,6 +126,7 @@ body {
                 margin-left: rem(-15, true);
                 justify-content: center;
                 padding: rem(39, true) 0 rem(100, true) rem(37, true);
+                z-index: 99;
             }
         }
 
@@ -142,6 +146,7 @@ body {
 
     .quiz-wrapper.question-6-view {
         .question-6-back {
+            display: block;
             opacity: 1;
             transition: opacity 0.2s ease;
 
