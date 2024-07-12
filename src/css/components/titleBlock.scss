@@ -6,6 +6,7 @@
         align-items: flex-start;
 
         &__title {
+            font-family: $font-title;
             font-weight: $font-weight-title;
             font-size: rem(22);
 
@@ -17,6 +18,7 @@
 
         &__ellipse {
             position: absolute;
+            pointer-events: none;
         }
     }
 }

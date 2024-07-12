@@ -1,5 +1,11 @@
 #tpl {
     .quiz-input {
+        font-family: $font-main;
+
+        label {
+            font-family: $font-main;
+        }
+
         &--checkbox {
             font-size: 1rem;
 
