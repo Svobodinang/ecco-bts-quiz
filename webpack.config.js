@@ -11,7 +11,7 @@ module.exports = () => {
     const options = {
         isProd: process.env.NODE_ENV === 'production',
         src: path.join(__dirname, 'src'),
-        dist: path.resolve(__dirname, 'docs')
+        dist: path.resolve(__dirname, 'dist')
     };
 
     switch (env) {

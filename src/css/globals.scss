@@ -32,6 +32,10 @@ body {
     //     overflow: auto;
     // }
 
+    p {
+        font-family: $font-main;
+    }
+
     .quiz-wrapper {
         width: 100vw;
         height: auto;
@@ -65,10 +69,6 @@ body {
 
         @media (--viewport-mobile-pt) {
             padding-top: max(vh(361, true), rem(361, true));
-        }
-
-        p {
-            font-family: $font-main;
         }
 
         h2 {
