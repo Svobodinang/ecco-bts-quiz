@@ -14,7 +14,9 @@ function start() {
 
     const projectModel = new ProjectModel();
 
-    projectModel.start();
+    setTimeout(() => {
+        projectModel.start();
+    }, 300);
 }
 
 start();

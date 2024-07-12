@@ -17,5 +17,17 @@
             align-items: center;
             gap: rem(21, true);
         }
+
+        // stylelint-disable-next-line
+        img {
+            transition: opacity 0.35s ease;
+        }
+
+        &:not(.show) {
+            img,
+            button {
+                opacity: 0;
+            }
+        }
     }
 }

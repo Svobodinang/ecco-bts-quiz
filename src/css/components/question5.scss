@@ -58,5 +58,22 @@
                 }
             }
         }
+
+        .title-block__num,
+        .title-block__title,
+        .title-block__ellipse,
+        textarea {
+            transition: opacity 0.35s ease;
+        }
+
+        &:not(.show) {
+            .title-block__num,
+            .title-block__title,
+            .title-block__ellipse,
+            textarea,
+            button {
+                opacity: 0;
+            }
+        }
     }
 }

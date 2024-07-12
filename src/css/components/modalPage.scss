@@ -8,6 +8,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: opacity 0.35s ease;
 
         &__back {
             width: 100%;
@@ -59,6 +60,10 @@
                 font-size: rem(14, true);
                 padding: rem(13, true) rem(43, true);
             }
+        }
+
+        &:not(.show) {
+            opacity: 0;
         }
     }
 }

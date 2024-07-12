@@ -50,5 +50,20 @@
                 }
             }
         }
+
+        .title-block__num,
+        .title-block__title,
+        .title-block__ellipse {
+            transition: opacity 0.35s ease;
+        }
+
+        &:not(.show) {
+            .title-block__num,
+            .title-block__title,
+            .title-block__ellipse,
+            button {
+                opacity: 0;
+            }
+        }
     }
 }

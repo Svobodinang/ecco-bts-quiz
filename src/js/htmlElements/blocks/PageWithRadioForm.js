@@ -96,10 +96,18 @@ export default class PageWithRadioForm extends HtmlElement {
         this.formValid = currentValidForm;
 
         if (!this.formValid) {
-            console.log('is not valid form!!!');
+            this.toDisableButton();
         } else {
-            console.log('form is valid');
+            this.toEnableButton();
         }
+    }
+
+    toDisableButton() {
+        this.children.button.el.setAttribute('disabled', true);
+    }
+
+    toEnableButton() {
+        this.children.button.el.removeAttribute('disabled');
     }
 
     eventHandler(event) {
@@ -114,6 +122,7 @@ export default class PageWithRadioForm extends HtmlElement {
 
         this.children.button.addClasses([`${this.baseClass}__button`]);
         this.children.button.appendToParent();
+        this.toDisableButton();
 
         this.children.form.el.addEventListener('submit', this.eventHandlerBinded);
     }

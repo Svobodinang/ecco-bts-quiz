@@ -34,7 +34,9 @@ export default class HtmlElement {
     show() {
         this.appendToParent();
 
-        this.el.classList.add(this.showClass);
+        setTimeout(() => {
+            this.el.classList.add(this.showClass);
+        }, 100);
     }
 
     hide() {

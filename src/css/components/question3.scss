@@ -54,7 +54,42 @@
             }
         }
 
-        // .quiz-input {
+        .title-block__num,
+        .title-block__title,
+        .title-block__ellipse,
+        .quiz-input {
+            transition: opacity 0.35s ease;
+        }
+
+        // // stylelint-disable-next-line
+        // .title-block__ellipse,
+        // .title-block__title {
+        //     transition-delay: 0.2s;
         // }
+
+        // $start: 0.4s;
+        // $count: 5;
+        // $space: 0.1s;
+
+        // @for $i from 1 to $count {
+        //     .quiz-input:nth-child(#{$i}) {
+        //         transition-delay: calc(#{$start} + #{$i - 1} * #{$space});
+        //     }
+        // }
+
+        // // stylelint-disable-next-line
+        // button {
+        //     transition-delay: calc(#{$start} + #{$count - 1} * #{$space} + 0.1s);
+        // }
+
+        &:not(.show) {
+            .title-block__num,
+            .title-block__title,
+            .title-block__ellipse,
+            .quiz-input,
+            button {
+                opacity: 0;
+            }
+        }
     }
 }

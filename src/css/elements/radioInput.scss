@@ -29,6 +29,7 @@
                     width: rem(46);
                     height: rem(34);
                     background-size: cover;
+                    transition: transform 0.2s cubic-bezier(0.21, 0, 0.33, 0.99);
                 }
 
                 &::after {
@@ -47,6 +48,10 @@
 
             .quiz-input__input[type="radio"]:checked + .quiz-input__label::after {
                 opacity: 1;
+            }
+
+            .quiz-input__label:hover::before {
+                transform: scale(1.15);
             }
         }
     }

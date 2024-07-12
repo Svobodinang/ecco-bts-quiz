@@ -60,5 +60,42 @@
                 }
             }
         }
+
+        .title-block__num,
+        .title-block__title,
+        .title-block__ellipse,
+        textarea {
+            transition: opacity 0.35s ease;
+        }
+
+        // // stylelint-disable-next-line
+        // .title-block__ellipse {
+        //     transition-delay: 0.2s;
+        // }
+
+        // // stylelint-disable-next-line
+        // .title-block__title {
+        //     transition-delay: 0.2s;
+        // }
+
+        // // stylelint-disable-next-line
+        // textarea {
+        //     transition-delay: 0.4s;
+        // }
+
+        // // stylelint-disable-next-line
+        // button {
+        //     transition-delay: 0.6s;
+        // }
+
+        &:not(.show) {
+            .title-block__num,
+            .title-block__title,
+            .title-block__ellipse,
+            textarea,
+            button {
+                opacity: 0;
+            }
+        }
     }
 }

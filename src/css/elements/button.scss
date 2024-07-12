@@ -10,9 +10,20 @@
         background-color: $color-light;
         padding: rem(13) rem(33);
         cursor: pointer;
+        transition: opacity 0.35s ease, transform 0.2s cubic-bezier(0.21, 0, 0.33, 0.99);
 
         @media (--viewport-portrait-layout) {
             padding: rem(9, true) rem(14, true);
+        }
+
+        &[disabled] {
+            opacity: 0.6;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        &:hover {
+            transform: scale(1.05);
         }
     }
 }

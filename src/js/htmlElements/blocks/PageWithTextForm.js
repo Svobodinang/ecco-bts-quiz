@@ -76,9 +76,9 @@ export default class PageQuestion1 extends HtmlElement {
         this.formValid = currentValidForm;
 
         if (!this.formValid) {
-            console.log('is not valid form!!!');
+            this.toDisableButton();
         } else {
-            console.log('form is valid');
+            this.toEnableButton();
         }
     }
 
@@ -89,11 +89,20 @@ export default class PageQuestion1 extends HtmlElement {
         if (this.formValid) this.action(this.answer);
     }
 
+    toDisableButton() {
+        this.children.button.el.setAttribute('disabled', true);
+    }
+
+    toEnableButton() {
+        this.children.button.el.removeAttribute('disabled');
+    }
+
     appendButton() {
         this.children.button = new ButtonHtmlElement({ parentEl: this.children.form.el, innerHTML: 'продолжить', type: 'submit' });
 
         this.children.button.addClasses([`${this.baseClass}__button`]);
         this.children.button.appendToParent();
+        this.toDisableButton();
 
         this.children.form.el.addEventListener('submit', this.eventHandlerBinded);
     }
