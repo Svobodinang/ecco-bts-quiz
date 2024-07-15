@@ -64,9 +64,11 @@ export default class PageQuestion1 extends PageWithRadioForm {
         this.children.answerEl.addClasses([`${this.baseClass}__sheet`]);
         this.children.answerEl.appendToParent();
 
-        this.children.text = new HtmlElement({ parentEl: this.children.answerEl.el, tag: 'p', innerHTML: sheetTexts[inputId] });
-        this.children.text.addClasses([`${this.baseClass}__sheet-text`]);
-        this.children.text.appendToParent();
+        setTimeout(() => {
+            this.children.text = new HtmlElement({ parentEl: this.children.answerEl.el, tag: 'p', innerHTML: sheetTexts[inputId] });
+            this.children.text.addClasses([`${this.baseClass}__sheet-text`]);
+            this.children.text.appendToParent();
+        }, 100);
     }
 
     hide() {

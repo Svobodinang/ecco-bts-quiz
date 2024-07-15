@@ -68,6 +68,10 @@ export default class ProjectModel {
 
         setTimeout(() => {
             this.pages[this.currentPageKey].show();
+
+            setTimeout(() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 100);
         }, 0 + 100);
     }
 
