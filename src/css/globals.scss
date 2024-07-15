@@ -63,7 +63,7 @@ body {
         @media (--viewport-portrait-layout) {
             padding: 0 rem(22, true) rem(50, true);
             max-width: 100%;
-            padding-top: max(vh(361 * 0.9, true), rem(361 * 0.9, true));
+            padding-top: vw(361, true);
             max-height: unset;
         }
 
@@ -81,7 +81,7 @@ body {
 
         .quiz-content {
             @media (--viewport-portrait-layout) {
-                padding-top: max(vh(307 * 0.98, true), rem(307 * 0.98, true));
+                padding-top: vw(307, true);
             }
         }
     }
@@ -119,14 +119,14 @@ body {
             align-items: flex-end;
 
             @media (--viewport-portrait-layout) {
-                width: rem(372, true);
-                height: rem(411, true);
+                width: vw(372, true);
+                height: vw(411, true);
                 top: vh(51, true);
                 left: auto;
                 right: auto;
                 margin-left: rem(-15, true);
                 justify-content: center;
-                padding: rem(39, true) 0 rem(100, true) rem(37, true);
+                padding: rem(39, true) 0 rem(100, true) vw(37, true);
                 z-index: 4;
             }
         }
@@ -136,7 +136,7 @@ body {
 
             @media (--viewport-portrait-layout) {
                 .form-images-wrapper {
-                    justify-content: flex-start;
+                    justify-content: center;
                     width: 100%;
                     max-width: 100%;
                     gap: rem(15, true) rem(0, true);

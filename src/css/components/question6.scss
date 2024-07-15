@@ -1,7 +1,7 @@
 #tpl {
     .question-6 {
         @media (--viewport-portrait-layout) {
-            padding-top: rem(100, true);
+            padding-top: vw(180, true);
         }
 
         .title-block {
