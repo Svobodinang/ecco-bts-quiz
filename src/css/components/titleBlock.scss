@@ -19,6 +19,7 @@
         &__ellipse {
             position: absolute;
             pointer-events: none;
+            max-width: unset;
         }
     }
 }

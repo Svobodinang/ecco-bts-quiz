@@ -2,7 +2,7 @@
     .quiz-button {
         @include reset-btn;
 
-        font-size: 1rem;
+        font-size: rem(20);
         text-transform: uppercase;
         display: block;
         font-family: $font-accent;
@@ -11,6 +11,7 @@
         padding: rem(13) rem(33);
         cursor: pointer;
         transition: opacity 0.35s ease, transform 0.2s cubic-bezier(0.21, 0, 0.33, 0.99);
+        width: auto;
 
         @media (--viewport-portrait-layout) {
             padding: rem(9, true) rem(14, true);

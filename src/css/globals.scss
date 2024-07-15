@@ -68,7 +68,7 @@ body {
         }
 
         @media (--viewport-mobile-pt) {
-            padding-top: max(vh(361, true), rem(361, true));
+            padding-top: max(vh(361 * 0.9, true), rem(361 * 0.9, true));
         }
 
         h2 {
@@ -89,7 +89,7 @@ body {
             }
 
             @media (--viewport-mobile-pt) {
-                padding-top: max(vh(307, true), rem(307, true));
+                padding-top: max(vh(307 * 0.98, true), rem(307 * 0.98, true));
             }
         }
     }
@@ -135,7 +135,7 @@ body {
                 margin-left: rem(-15, true);
                 justify-content: center;
                 padding: rem(39, true) 0 rem(100, true) rem(37, true);
-                z-index: 99;
+                z-index: 4;
             }
         }
 

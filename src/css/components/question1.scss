@@ -56,7 +56,7 @@
                 margin-bottom: rem(35);
 
                 @media (--viewport-portrait-layout) {
-                    margin-bottom: rem(17, true);
+                    margin-bottom: 0;
                 }
             }
         }

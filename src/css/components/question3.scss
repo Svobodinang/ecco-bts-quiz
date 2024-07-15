@@ -4,7 +4,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: rem(330 - 306, true);
+            margin-top: rem(-10, true);
         }
 
         .title-block {
@@ -13,7 +13,7 @@
             padding-left: rem(-10);
 
             @media (--viewport-portrait-layout) {
-                margin-bottom: rem(73, true);
+                margin-bottom: rem(40, true);
                 padding-left: 0;
                 gap: rem(11, true);
             }

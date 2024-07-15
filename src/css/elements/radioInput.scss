@@ -4,11 +4,17 @@
     }
 
     .quiz-input {
+        text-align: left;
+
+        label {
+            padding: 0;
+        }
+
         &--radio {
             color: $color-light;
             font-family: $font-main;
             font-weight: $font-weight-main;
-            font-size: 1rem;
+            font-size: rem(20);
 
             .quiz-input__input[type="radio"] {
                 display: none;

@@ -9,7 +9,7 @@
             gap: rem(37);
 
             @media (--viewport-portrait-layout) {
-                margin-bottom: rem(38 + 13, true);
+                margin-bottom: rem(20, true);
                 gap: rem(44, true);
             }
 
