@@ -30,8 +30,8 @@
         }
 
         @media (--viewport-portrait-layout) {
-            width: rem(330, true);
-            height: rem(292, true);
+            width: rem(330 * 0.9, true);
+            height: rem(292 * 0.9, true);
             top: rem(140, true);
             right: rem(-27, true);
             left: auto;
