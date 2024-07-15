@@ -33,7 +33,7 @@
 
                 @media (--viewport-portrait-layout) {
                     text-align: center;
-                    max-width: rem(324, true);
+                    max-width: rem(324 * 0.8, true);
                     font-size: rem(14, true);
                     margin-top: rem(22, true);
                 }
