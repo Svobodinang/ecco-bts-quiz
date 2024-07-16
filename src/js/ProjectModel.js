@@ -55,7 +55,11 @@ export default class ProjectModel {
     }
 
     start() {
-        this.pages[this.currentPageKey].show();
+        document.getElementById('logoWrapper').classList.add('show');
+
+        setTimeout(() => {
+            this.pages[this.currentPageKey].show();
+        }, 1000);
     }
 
     toPage(nextPageKey, toSaveAnwers, answers = null) {

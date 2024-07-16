@@ -104,17 +104,38 @@ body {
             height: 100%;
             background-image: url("~assets/images/logo.svg?inline");
             background-size: cover;
+            opacity: 0;
         }
 
         .logo-ellipse {
-            width: em(234, $w);
-            height: em(333, $w);
-            background-image: url("~assets/images/logo-ellipse.png");
+            width: em(405, $w);
+            height: em(222, $w);
             position: absolute;
-            top: em(-127, $w);
-            left: 0;
-            transform: rotate(-126deg);
+            top: em(-70, $w);
+            left: em(-80, $w);
             background-size: cover;
+            transition: opacity 0.35s ease;
+
+            svg {
+                width: 100%;
+                height: 100%;
+                stroke-dasharray: 1100;
+                stroke-dashoffset: 1100;
+            }
+        }
+
+        &.show {
+            .logotype {
+                opacity: 1;
+                transition: opacity 0.35s ease;
+            }
+
+            .logo-ellipse {
+                svg {
+                    stroke-dashoffset: 0;
+                    transition: stroke-dashoffset 1s cubic-bezier(0.34, 0, 0.59, 1) 0.3s;
+                }
+            }
         }
     }
 
