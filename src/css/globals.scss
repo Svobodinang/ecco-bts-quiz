@@ -73,6 +73,51 @@ body {
         }
     }
 
+    // size = logotype size
+    .logo-wrapper {
+        $w: 235;
+        $wPt: 105;
+
+        position: absolute;
+        font-size: rem($w);
+        width: em($w, $w);
+        height: em(95, $w);
+        top: vh(104);
+        right: vw(366);
+
+        @media screen and (max-width: 1600px) {
+            right: vw(100);
+        }
+
+        @media (--viewport-portrait-layout) {
+            font-size: rem($wPt * 1.3, true);
+            top: vh(80, true);
+            right: vw(53, true);
+        }
+
+        @media (--viewport-mobile-pt) {
+            font-size: rem($wPt, true);
+        }
+
+        .logotype {
+            width: 100%;
+            height: 100%;
+            background-image: url("~assets/images/logo.svg?inline");
+            background-size: cover;
+        }
+
+        .logo-ellipse {
+            width: em(234, $w);
+            height: em(333, $w);
+            background-image: url("~assets/images/logo-ellipse.png");
+            position: absolute;
+            top: em(-127, $w);
+            left: 0;
+            transform: rotate(-126deg);
+            background-size: cover;
+        }
+    }
+
     .quiz-wrapper.quiz-view {
         @media (--viewport-portrait-layout) {
             background-position: center 5%;
@@ -83,6 +128,10 @@ body {
             @media (--viewport-portrait-layout) {
                 padding-top: vw(307, true);
             }
+        }
+
+        .logo-ellipse {
+            opacity: 0;
         }
     }
 
