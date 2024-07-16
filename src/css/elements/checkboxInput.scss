@@ -22,8 +22,8 @@
                 transition: transform 0.2s cubic-bezier(0.21, 0, 0.33, 0.99);
 
                 @media (--viewport-portrait-layout) {
-                    width: rem(110, true);
-                    height: rem(119, true);
+                    width: vw(110, true);
+                    height: vw(119, true);
                 }
 
                 &::before {
