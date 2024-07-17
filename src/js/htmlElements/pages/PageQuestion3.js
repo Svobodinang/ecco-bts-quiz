@@ -13,7 +13,7 @@ const formData = [
     },
     {
         id: 'LITE-K',
-        label: '<span class="accent-text">Проверить, насколько далеко можно прыгнуть в&nbsp;SP1&nbsp;LITE K</span>'
+        label: '<span class="accent-text">Проверить, насколько далеко можно прыгнуть в&nbsp;SP1&nbsp;LITE&nbsp;K</span>'
     },
     {
         id: 'dining',
