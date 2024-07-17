@@ -38,20 +38,21 @@ body {
 
     .quiz-wrapper {
         width: 100vw;
-        height: auto;
-        min-height: 100vh;
         background-image: url("~assets/images/back.jpg");
         background-position: 30% 20%;
         background-repeat: no-repeat;
         background-size: cover;
-        padding: vh(112 + 70) rem(20) rem(50) max(#{vw(200)}, #{rem(200)});
+        padding: vh(20) rem(20) vh(20) max(#{vw(200)}, #{rem(200)});
+        display: flex;
+        align-items: center;
+        height: calc(100vh - 70px);
 
         @media (--viewport-portrait-layout) {
             background-image: url("~assets/images/back-pt.jpg");
             background-position: center 0%;
             padding: 0;
             height: auto;
-            min-height: unset;
+            justify-content: center;
         }
     }
 
@@ -63,7 +64,7 @@ body {
         @media (--viewport-portrait-layout) {
             padding: 0 rem(22, true) rem(50, true);
             max-width: 100%;
-            padding-top: vw(361, true);
+            padding-top: vw(320, true);
             max-height: unset;
         }
 
