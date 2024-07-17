@@ -114,7 +114,8 @@ export default class PageQuestion1 extends PageWithCheckboxForm {
         });
 
         this.formData = formData;
-        this.titleText = 'Cобери свой школьный стартер-пак';
+        // eslint-disable-next-line
+        this.titleText = 'Собери свой стартер-пак. Кликай на&nbsp;картинки, связанные со&nbsp;школой, чтобы добавить их&nbsp;на&nbsp;доску. Можно выбрать от&nbsp;2&nbsp;до&nbsp;6&nbsp;штук.';
         this.titleNum = titleNum;
 
         this.appendEls();

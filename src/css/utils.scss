@@ -80,7 +80,7 @@ $baseHeightMb: 677;
         360px: 12px,
         375px: 14px,
         425px: 14px,
-        1024px: 24px
+        1024px: 30px
     );
 
     @include poly-fluid-sizing("--font-size", $mapFontSize);

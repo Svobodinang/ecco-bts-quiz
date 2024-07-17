@@ -30,13 +30,15 @@
         }
 
         @media (--viewport-portrait-layout) {
-            width: rem(330 * 0.9, true);
-            height: rem(292 * 0.9, true);
-            top: rem(140, true);
-            right: rem(-27, true);
+            $fs: 18;
+
+            font-size: rem($fs * 0.85, true);
+            width: em(330 * 0.9, $fs);
+            height: em(292 * 0.9, $fs);
+            top: em(140, $fs);
+            right: em(-27, $fs);
             left: auto;
-            font-size: rem(18, true);
-            padding: rem(60, true) rem(40, true) rem(40, true) rem(40, true);
+            padding: em(60, $fs) em(40, $fs) em(40, $fs) em(40, $fs);
         }
 
         &::before {

@@ -60,11 +60,12 @@ body {
         max-width: rem(701);
         height: auto;
         position: relative;
+        min-height: rem(500);
 
         @media (--viewport-portrait-layout) {
             padding: 0 rem(22, true) rem(50, true);
             max-width: 100%;
-            padding-top: vw(320, true);
+            padding-top: vw(220, true);
             max-height: unset;
         }
 
@@ -140,22 +141,22 @@ body {
         }
     }
 
-    .quiz-wrapper.quiz-view {
-        @media (--viewport-portrait-layout) {
-            background-position: center 5%;
-            transition: background-position 0.35s ease;
-        }
+    // .quiz-wrapper.quiz-view {
+    //     @media (--viewport-portrait-layout) {
+    //         background-position: center 5%;
+    //         transition: background-position 0.35s ease;
+    //     }
 
-        .quiz-content {
-            @media (--viewport-portrait-layout) {
-                padding-top: vw(307, true);
-            }
-        }
+    //     .quiz-content {
+    //         @media (--viewport-portrait-layout) {
+    //             padding-top: vw(307, true);
+    //         }
+    //     }
 
-        .logo-ellipse {
-            opacity: 0;
-        }
-    }
+    //     .logo-ellipse {
+    //         opacity: 0;
+    //     }
+    // }
 
     .question-6-back {
         background-image: url("~assets/images/back-blue.jpg");
@@ -192,12 +193,12 @@ body {
             @media (--viewport-portrait-layout) {
                 width: vw(372, true);
                 height: vw(411, true);
-                top: vh(51, true);
+                top: vw(150, true);
                 left: auto;
                 right: auto;
                 margin-left: rem(-15, true);
                 justify-content: center;
-                padding: rem(39, true) 0 rem(100, true) vw(37, true);
+                padding: vw(39, true) 0 vw(100, true) vw(37, true);
                 z-index: 4;
             }
         }
@@ -217,6 +218,12 @@ body {
     }
 
     .quiz-wrapper.question-6-view {
+        .quiz-content {
+            @media (--viewport-portrait-layout) {
+                padding-top: vw(50, true);
+            }
+        }
+
         .question-6-back {
             display: block;
             opacity: 1;

@@ -33,6 +33,12 @@ export default class MainPage extends HtmlElement {
 
         this.children.titleImg.addClasses([`${this.baseClass}__title-img`]);
         this.children.titleImg.appendToParent();
+
+        // eslint-disable-next-line
+        this.children.subtitle = new HtmlElement({ parentEl: this.el, tag: 'p', innerHTML: 'Давай вспомним, как это было? Любимый предмет, первый медленный танец, классные друзья на&nbsp;всю жизнь. Поделись своими школьными воспоминаниями и&nbsp;получи приятный бонус от&nbsp;ECCO.' });
+
+        this.children.subtitle.addClasses([`${this.baseClass}__subtitle`]);
+        this.children.subtitle.appendToParent();
     }
 
     appendButton() {

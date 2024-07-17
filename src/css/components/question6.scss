@@ -1,16 +1,12 @@
 #tpl {
     .question-6 {
-        @media (--viewport-portrait-layout) {
-            padding-top: vw(120, true);
-        }
-
         .title-block {
             margin-bottom: rem(88);
             gap: rem(37);
 
             @media (--viewport-portrait-layout) {
-                margin-bottom: rem(20, true);
-                gap: rem(44, true);
+                margin-bottom: vw(400, true);
+                gap: rem(10, true);
             }
 
             &__num {
@@ -26,22 +22,22 @@
                 margin-top: rem(69);
 
                 @media (--viewport-portrait-layout) {
-                    max-width: rem(177, true);
+                    max-width: rem(177 * 1.5, true);
                     margin-top: rem(13, true);
                 }
             }
 
             &__ellipse {
-                width: rem(602);
-                height: rem(171);
-                top: rem(0);
-                left: rem(20);
+                width: rem(602 * 1.1);
+                height: rem(171 * 1.5);
+                top: rem(-20);
+                left: rem(-10);
 
                 @media (--viewport-portrait-layout) {
-                    width: rem(263, true);
-                    height: rem(98, true);
-                    top: rem(-20, true);
-                    left: rem(50, true);
+                    width: rem(263 * 1.6, true);
+                    height: rem(98 * 1.6, true);
+                    top: rem(-30, true);
+                    left: rem(-30, true);
                 }
             }
         }
