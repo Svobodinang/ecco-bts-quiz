@@ -141,22 +141,22 @@ body {
         }
     }
 
-    // .quiz-wrapper.quiz-view {
-    //     @media (--viewport-portrait-layout) {
-    //         background-position: center 5%;
-    //         transition: background-position 0.35s ease;
-    //     }
+    .quiz-wrapper.quiz-view {
+        // @media (--viewport-portrait-layout) {
+        //     background-position: center 5%;
+        //     transition: background-position 0.35s ease;
+        // }
 
-    //     .quiz-content {
-    //         @media (--viewport-portrait-layout) {
-    //             padding-top: vw(307, true);
-    //         }
-    //     }
+        // .quiz-content {
+        //     @media (--viewport-portrait-layout) {
+        //         padding-top: vw(307, true);
+        //     }
+        // }
 
-    //     .logo-ellipse {
-    //         opacity: 0;
-    //     }
-    // }
+        .logo-ellipse {
+            opacity: 0;
+        }
+    }
 
     .question-6-back {
         background-image: url("~assets/images/back-blue.jpg");
