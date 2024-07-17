@@ -8,7 +8,7 @@
 
         @media (--viewport-portrait-layout) {
             align-items: center;
-            gap: vw(25, true);
+            gap: vw(15, true);
         }
     }
 
@@ -19,7 +19,7 @@
         width: 100%;
 
         @media (--viewport-portrait-layout) {
-            gap: vw(27, true);
+            gap: vw(20, true);
         }
     }
 
