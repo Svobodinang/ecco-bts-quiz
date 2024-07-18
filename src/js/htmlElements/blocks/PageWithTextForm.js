@@ -25,10 +25,12 @@ export default class PageQuestion1 extends HtmlElement {
         this.onChangeInputBinded = this.onChangeInput.bind(this);
     }
 
-    appendEls() {
+    appendEls(helpText) {
         this.appendTitleBlock();
         this.appendForm();
         this.appendTextInput();
+
+        if (helpText) this.appendHelpText(helpText);
         this.appendButton();
     }
 
@@ -87,6 +89,13 @@ export default class PageQuestion1 extends HtmlElement {
         this.validateForm();
 
         if (this.formValid) this.action(this.answer);
+    }
+
+    appendHelpText(helpText) {
+        this.children.helpText = new HtmlElement({ parentEl: this.children.form.el, tag: 'p', innerHTML: helpText });
+        this.children.helpText.addClasses([`${this.baseClass}__help-text`]);
+
+        this.children.helpText.appendToParent();
     }
 
     toDisableButton() {

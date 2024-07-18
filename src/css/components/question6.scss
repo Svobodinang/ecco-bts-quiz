@@ -1,11 +1,11 @@
 #tpl {
     .question-6 {
         .title-block {
-            margin-bottom: rem(88);
+            margin-bottom: vh(70);
             gap: rem(37);
 
             @media (--viewport-portrait-layout) {
-                margin-bottom: vw(400, true);
+                margin-bottom: vw(370, true);
                 gap: rem(10, true);
             }
 

@@ -12,7 +12,7 @@
             padding-left: rem(18);
 
             @media (--viewport-portrait-layout) {
-                margin-bottom: rem(47, true);
+                margin-bottom: vw(25, true);
                 padding-left: 0;
                 gap: rem(21, true);
             }

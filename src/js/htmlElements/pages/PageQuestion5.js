@@ -17,7 +17,7 @@ export default class PageQuestion1 extends PageWithTextForm {
         // eslint-disable-next-line
         this.titleText = 'Столько историй, романтических и&nbsp;забавных, связано со&nbsp;школьной дискотекой. Поделись своим самым ярким воспоминанием&nbsp;&mdash; поностальгируем вместе!';
         this.titleNum = titleNum;
-        this.appendEls();
+        this.appendEls('*Этот вопрос можно пропустить, поставив любой символ в&nbsp;поле для ответа');
         this.addClasses();
     }
 }

@@ -10,6 +10,20 @@
             align-items: center;
             gap: vw(15, true);
         }
+
+        p {
+            color: $color-light;
+            font-size: rem(16);
+            font-weight: 400;
+            margin-top: rem(-31);
+
+            @media (--viewport-portrait-layout) {
+                font-size: rem(13, true);
+                text-align: center;
+                width: rem(314, true);
+                margin-top: vw(-10, true);
+            }
+        }
     }
 
     .form-wrapper {
@@ -19,7 +33,7 @@
         width: 100%;
 
         @media (--viewport-portrait-layout) {
-            gap: vw(20, true);
+            gap: vw(15, true);
         }
     }
 

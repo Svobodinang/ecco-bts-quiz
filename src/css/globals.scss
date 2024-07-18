@@ -45,7 +45,7 @@ body {
         padding: vh(20) rem(20) vh(20) max(#{vw(200)}, #{rem(200)});
         display: flex;
         align-items: center;
-        height: calc(100vh - 70px);
+        min-height: calc(100vh - 70px);
 
         @media (--viewport-portrait-layout) {
             background-image: url("~assets/images/back-pt.jpg");
@@ -65,7 +65,7 @@ body {
         @media (--viewport-portrait-layout) {
             padding: 0 rem(22, true) rem(50, true);
             max-width: 100%;
-            padding-top: vw(190, true);
+            padding-top: vw(165, true);
             max-height: unset;
         }
 
@@ -93,8 +93,8 @@ body {
 
         @media (--viewport-portrait-layout) {
             font-size: rem($wPt * 1.3, true);
-            top: vh(80, true);
-            right: vw(53, true);
+            top: vh(50, true);
+            right: vw(43, true);
         }
 
         @media (--viewport-mobile-pt) {
