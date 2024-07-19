@@ -85,22 +85,15 @@ body {
         width: em($w, $w);
         height: em(95, $w);
         top: vh(104);
-        right: vw(366);
+        left: calc(50% + #{vw(360)});
         display: flex;
         justify-content: center;
-
-        @media screen and (max-width: 1600px) {
-            right: vw(200);
-        }
-
-        @media screen and (max-width: 1300px) {
-            right: vw(100);
-        }
 
         @media (--viewport-portrait-layout) {
             font-size: rem($wPt * 1.3, true);
             top: vh(40, true);
             right: vw(25, true);
+            left: auto;
         }
 
         @media (--viewport-mobile-pt) {

@@ -57,6 +57,14 @@ $baseHeightMb: 677;
     @return Min(#{$vw}, #{$vh});
 }
 
+@function vw-vh-cover($px, $mobile: false, $clicker: false) {
+    $vw: vw($px, $mobile, $clicker);
+    $vh: vh($px, $mobile, $clicker);
+
+    // very cool kostyl coz sass is case-sensitive, but css isn't
+    @return Max(#{$vw}, #{$vh});
+}
+
 @function percent($px, $base: 1) {
     @return #{math.div(100% * $px, $base)};
 }
