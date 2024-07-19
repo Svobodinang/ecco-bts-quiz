@@ -90,6 +90,10 @@ body {
         justify-content: center;
 
         @media screen and (max-width: 1600px) {
+            right: vw(200);
+        }
+
+        @media screen and (max-width: 1300px) {
             right: vw(100);
         }
 
@@ -173,6 +177,15 @@ body {
 
         .logo-ellipse {
             opacity: 0;
+        }
+
+        .logo-wrapper {
+            transition: transform 0.35s ease;
+            transform: scale(1.5);
+
+            @media (--viewport-portrait-layout) {
+                transform: unset;
+            }
         }
     }
 

@@ -30,7 +30,7 @@ export default class PageQuestion1 extends HtmlElement {
             parentEl: this.children.content.el,
             tag: 'p',
             // eslint-disable-next-line
-            innerHTML: 'Спасибо, что разделил свои воспоминания с&nbsp;нами! Наши виртуальные объятия&nbsp;&mdash;</br>твои 3000 бонусов</br>в&nbsp;программе ECCO MOMENTS.'
+            innerHTML: 'Спасибо, что разделил свои воспоминания с&nbsp;нами! Наши виртуальные объятия&nbsp;&mdash; 3&nbsp;000 бонусов на&nbsp;покупки в&nbsp;ECCO'
         });
         this.children.text.addClasses([`${this.baseClass}__text`]);
         this.children.text.appendToParent();
