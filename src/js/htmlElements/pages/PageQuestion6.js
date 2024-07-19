@@ -1,108 +1,28 @@
-import PageWithCheckboxForm from '../blocks/PageWithCheckboxForm';
+import PageWithRadioForm from '../blocks/PageWithRadioForm';
 
 import titleNum from '../../../assets/images/num6.svg';
-import checkbox1 from '../../../assets/images/checkbox1.png';
-import checkbox2 from '../../../assets/images/checkbox2.png';
-import checkbox3 from '../../../assets/images/checkbox3.png';
-import checkbox4 from '../../../assets/images/checkbox4.png';
-import checkbox5 from '../../../assets/images/checkbox5.png';
-import checkbox6 from '../../../assets/images/checkbox6.png';
-import checkbox7 from '../../../assets/images/checkbox7.png';
-import checkbox8 from '../../../assets/images/checkbox8.png';
-import checkbox9 from '../../../assets/images/checkbox9.png';
-import checkbox10 from '../../../assets/images/checkbox10.png';
-import checkbox11 from '../../../assets/images/checkbox11.png';
-import checkbox12 from '../../../assets/images/checkbox12.png';
 
 const formData = [
     {
-        id: 'spring',
-        labelImg: {
-            src: checkbox1,
-            alt: 'фотография детской игрушки - пружины'
-        }
+        id: 'BIOM',
+        label: '<span class="accent-text">Погонять мяч в&nbsp;новых BIOM&nbsp;K1</span>'
     },
     {
-        id: 'love-is',
-        labelImg: {
-            src: checkbox2,
-            alt: 'фотография детской жвачки love is...'
-        }
+        id: 'talk',
+        label: '<span class="accent-text">Поболтать с&nbsp;друзьями, болтая ногами на&nbsp;подоконнике</span>'
     },
     {
-        id: 'mario',
-        labelImg: {
-            src: checkbox3,
-            alt: 'Фотография компьютерной игры Марио'
-        }
+        id: 'LITE-K',
+        label: '<span class="accent-text">Проверить, насколько далеко можно прыгнуть в&nbsp;SP1&nbsp;LITE&nbsp;K</span>'
     },
     {
-        id: 'dendy',
-        labelImg: {
-            src: checkbox4,
-            alt: 'Фотография старой игры Dendy'
-        }
-    },
-    {
-        id: 'bezrukov',
-        labelImg: {
-            src: checkbox5,
-            alt: 'Фотографи Сергея Безрукова'
-        }
-    },
-    {
-        id: 'friends',
-        labelImg: {
-            src: checkbox6,
-            alt: 'Фотографи девочек подружек'
-        }
-    },
-    {
-        id: 'pleer',
-        labelImg: {
-            src: checkbox7,
-            alt: 'Фотографи плеера'
-        }
-    },
-    {
-        id: 'nokia',
-        labelImg: {
-            src: checkbox8,
-            alt: 'Телефон Nokia'
-        }
-    },
-    {
-        id: 'blender',
-        labelImg: {
-            src: checkbox9,
-            alt: 'Блендер'
-        }
-    },
-    {
-        id: 'classics',
-        labelImg: {
-            src: checkbox10,
-            alt: 'Игра в классики'
-        }
-    },
-    {
-        id: 'tamagochi',
-        labelImg: {
-            src: checkbox11,
-            alt: 'Тамагочи'
-        }
-    },
-    {
-        id: 'bumbl',
-        labelImg: {
-            src: checkbox12,
-            alt: 'Жвачка хуба буба'
-        }
+        id: 'dining',
+        label: '<span class="accent-text">Взять в&nbsp;столовой ту&nbsp;самую пиццу. И&nbsp;вот эту шоколадку на&nbsp;сдачу!</span>'
     }
 ];
 
-export default class PageQuestion1 extends PageWithCheckboxForm {
-    baseClass = 'question-6';
+export default class PageQuestion1 extends PageWithRadioForm {
+    baseClass = 'question-3';
 
     constructor({
         parentEl,
@@ -114,10 +34,8 @@ export default class PageQuestion1 extends PageWithCheckboxForm {
         });
 
         this.formData = formData;
-        // eslint-disable-next-line
-        this.titleText = 'Собери свой стартер-пак. Кликай на&nbsp;картинки ниже, связанные со&nbsp;школой, чтобы добавить их&nbsp;на&nbsp;доску. Можно выбрать от&nbsp;2&nbsp;до&nbsp;6&nbsp;штук.';
+        this.titleText = 'Идеальная перемена&nbsp;&mdash; она какая?';
         this.titleNum = titleNum;
-
         this.appendEls();
         this.addClasses();
     }

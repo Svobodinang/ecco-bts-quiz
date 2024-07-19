@@ -2,18 +2,18 @@
     .question-6 {
         .title-block {
             margin-bottom: vh(70);
-            gap: rem(37);
+            gap: rem(37 * 0.8);
 
             @media (--viewport-portrait-layout) {
                 margin-bottom: vw(370, true);
-                gap: rem(10, true);
+                gap: rem(0, true);
             }
 
             &__num {
-                width: rem(69);
+                width: rem(69 * 1.5);
 
                 @media (--viewport-portrait-layout) {
-                    width: rem(41, true);
+                    width: rem(41 * 1.2, true);
                 }
             }
 

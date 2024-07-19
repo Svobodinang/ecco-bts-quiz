@@ -27,11 +27,11 @@ export default class ProjectModel {
             this.quizWrapperEl.classList.add('quiz-view');
         }
 
-        if (newValue === 'pageQuestion6') {
+        if (newValue === 'pageQuestion3') {
             this.quizWrapperEl.classList.add('question-6-view');
         }
 
-        if (newValue === 'pageQuestion7') {
+        if (newValue === 'pageQuestion4') {
             this.quizWrapperEl.classList.remove('question-6-view');
         }
     }
