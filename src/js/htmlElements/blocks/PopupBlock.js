@@ -35,7 +35,7 @@ export default class PageQuestion1 extends HtmlElement {
         this.children.text.addClasses([`${this.baseClass}__text`]);
         this.children.text.appendToParent();
 
-        this.children.button = new ButtonHtmlElement({ parentEl: this.children.content.el, innerHTML: 'смотреть ответы' });
+        this.children.button = new ButtonHtmlElement({ parentEl: this.children.content.el, innerHTML: 'посмотреть ответы друзей ECCO' });
         this.children.button.addClasses([`${this.baseClass}__button`]);
         this.children.button.appendToParent();
 
